@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import styles from "./catalogue.module.scss";
+import styles from "@app/catalogue/catalogue.module.scss";
 import  catalogueItems from "./catalogueItems";
 import Service from "@components/services/service";
 import Image from "next/image";

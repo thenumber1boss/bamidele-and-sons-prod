@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Close, } from "@mui/icons-material";
 import ThemeToggle from "@components/ui/themeToggle"
-import styles from "./navBar.module.scss"; // Import the CSS module
+import styles from "@components/header/navbar.module.scss"; // Import the CSS module
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

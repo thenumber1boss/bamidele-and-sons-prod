@@ -2,7 +2,7 @@ import  Navbar  from '@components/header/Navbar'
 import Footer from '@components/footer/footer';
 import StickySocials from '@components/ui/stickySocials';
 import type { Metadata } from "next";
-import "./globals.css";
+import "@app/globals.css";
 
 export const metadata: Metadata = {
   title: "Bamidele and Sons Metal Steel World",

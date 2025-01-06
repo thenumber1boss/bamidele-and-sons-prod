@@ -1,4 +1,4 @@
-import styles from './button.module.scss';
+import styles from '@components/ui/button/button.module.scss';
 
 // components/ui/button.js
 export function Button({ children, onClick, }) {

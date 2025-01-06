@@ -1,6 +1,6 @@
 "use client";
 import Service from '@components/services/service';
-import styles from './homepage.module.scss';
+import styles from '@app/homepage.module.scss';
 import { Button } from '@components/ui/button/button';
 import useCaseItems from './useCaseItems';
 import Image from 'next/image';

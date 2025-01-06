@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import styles from "./contact-us.module.scss";
+import styles from "@app/contact-us/contact-us.module.scss";
 
 const ContactUsPage = () => {
     return (

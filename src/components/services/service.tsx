@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@components/ui/button/button";
-import styles from "./services.module.scss"
+import styles from "@components/services/services.module.scss"
 
 
 export default function Service() {

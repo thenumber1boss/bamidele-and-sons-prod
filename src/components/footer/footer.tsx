@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "./footer.module.scss";
+import styles from "@components/footer/footer.module.scss";
 
 
 export default function Footer() {
