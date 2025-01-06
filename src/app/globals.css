@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'TrueFlair';
+  src: url('/fonts/Playfair-Variable.woff2') format('woff2');
+  font-weight: 100 900; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --background-light: #EFEFEF;
+  --background-dark: #131313;
+  --primary-color: #00BFC6;
+  --accent-color: #00bfc6bd;
+  --text-dark: #f0f0f0;
+  --text-light: #131313;
+}
+
+body {
+  background: url('../assets/home_img.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: hwb(0 7% 93% / 0.705);
+    z-index: -1;
+  }
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}

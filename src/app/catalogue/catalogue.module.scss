@@ -1,0 +1,28 @@
+.catalogueHero {
+    @apply  bg-cover bg-center bg-no-repeat bg-[url('../../assets/catalogue/catalogue-hero.png')] h-[200px] lg:h-[459px] flex items-center justify-start px-[43px] lg:px-[96px];
+
+    .heroText {
+        @apply text-white text-[32px] lg:text-[64px] font-[600] text-center font-playfair;
+    }
+}
+
+.catalogueContainer {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-bg-light dark:bg-bg-dark gap-y-[40px] gap-x-[12px] md:gap-y-[72px] pt-[100px] px-[20px] sm:px-[40px] lg:px-[96px] pb-[60px] lg:pb-[200px];
+
+    .catalogueImage {
+        @apply w-full relative;
+
+        .image {
+            @apply w-full h-[auto] object-cover;
+        }
+
+        .description {
+            @apply bg-[#F5F5F5] items-center justify-center py-[24px] absolute bottom-0 w-full hidden;
+
+            .descText {
+                @apply text-[#333333] text-[16px] font-[400] text-center;
+            }
+        }
+    }
+}
+

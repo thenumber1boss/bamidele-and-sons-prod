@@ -1,0 +1,66 @@
+/* navBar.module.scss */
+
+
+.navContainer {
+  @apply flex flex-col w-full
+    self-center xl:gap-[100px] xl:justify-center px-[20px]
+    sm:px-[40px] lg:px-[96px] bg-bg-light dark:bg-bg-dark;
+}
+  
+  .inner {
+    @apply flex justify-between pb-[10px] md:pb-0;
+  }
+  .logoContainer {
+    @apply w-[200px] sm:w-[270px] ml-[-20px] lg:ml-[-40px] h-[60px] bg-[url('/logo.png')] dark:bg-[url('/darkLogo.png')] bg-no-repeat bg-cover bg-center;
+  }
+    
+    .navMenu {
+      @apply hidden items-center md:flex gap-[10px] md:gap-[60px] p-[10px];
+    }
+
+    .hide {
+        @apply md:hidden p-[10px] flex items-center;
+      }
+    
+    .specialActions {
+      display: flex;
+      gap: 24px;
+      @media (max-width: 769px) {
+        gap: 10px;
+        
+      }
+    }
+  
+    .navIcons {
+      @apply text-[var(--primary-color)] w-[40px] h-[40px] cursor-pointer;
+      &:hover {
+        color: var(--primary-color);
+      }
+      @media (max-width: 769px) {
+        @apply w-[30px] h-[30px];
+        
+      }
+    }
+    
+    .mobileMenu {
+      @apply flex flex-col items-start w-full gap-[1rem] px-[20px] py-[20px] md:hidden border-t-[2px] border-t-[var(--primary-color)] md:border-b-0 bg-bg-light dark:bg-bg-dark;
+    }
+
+
+.navText {
+  @apply text-text-light dark:text-text-dark text-[16px] font-[400] pb-[10px] cursor-pointer border-b-[solid] border-b-[2px] border-b-[transparent] transition-colors duration-300 ease-in-out;
+  
+    &:hover {
+      border-bottom: 2px solid var(--primary-color);
+    }
+  
+    @media (max-width: 1280px) {
+      width: auto;
+    }
+  }
+  
+  .active {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  

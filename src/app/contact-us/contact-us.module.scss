@@ -1,0 +1,32 @@
+.contactUsContainer {
+    @apply flex flex-col items-center justify-center mt-[100px] px-[20px] sm:px-[40px] lg:px-[96px] mb-[60px] lg:mb-[200px] relative;
+
+    
+
+    .contactCard {
+        @apply flex flex-col sm:flex-row items-center justify-center bg-[#06556E] p-[20px] w-[100%] h-[auto] lg:max-w-[1248px] lg:px-[108px] py-[57px] relative  gap-[40px];
+
+        .cardImage {
+            @apply w-full h-[250px] object-cover lg:max-w-[395px] lg:h-[443px] lg:mr-[40px];
+            background-image: url('../../assets/contact-image.png');
+        }
+
+        .detailsWrapper {
+            @apply flex flex-col items-start justify-center w-full lg:max-w-[395px] gap-[20px] lg:gap-[40px];
+           
+            .contactTitle {
+                @apply text-white text-[24px] lg:text-[48px] font-[600] font-playfair;
+            }
+
+            .contactDetails {
+                @apply flex flex-col items-start justify-center gap-[10px] lg:gap-[16px];
+
+                .contactText {
+                    @apply text-white text-[16px] lg:text-[24px] font-[400];
+                }
+            }
+
+           
+        }
+    }
+}

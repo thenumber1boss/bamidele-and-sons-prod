@@ -1,0 +1,23 @@
+.servicesContainer {
+    @apply w-full box-border text-white relative min-h-[300px] px-[20px] sm:px-[40px] lg:px-[96px] py-[40px] lg:py-[60px];
+  
+    .servicesHeading {
+      @apply text-[32px] lg:text-[64px] mb-4 font-[600] font-playfair;
+    }
+  
+    .servicesList {
+      @apply list-none p-0;
+  
+      .serviceItem {
+        @apply flex justify-between py-[40px];
+  
+        &:first-child {
+          @apply border-b border-[#444];
+        }
+
+        .buttonWrapper {
+            @apply flex w-[100px] text-[12px];
+        }
+      }
+    }
+  }

@@ -1,0 +1,43 @@
+.footerContainer {
+    @apply flex flex-col bg-bg-light dark:bg-bg-dark px-[20px] py-[50px] gap-5 sm:px-[40px] md:px-[80px];
+
+    .footerContent {
+        @apply flex flex-col items-start sm:flex-row sm:justify-between sm:items-end gap-[40px];
+    }
+
+    .footerLeft {
+        @apply flex flex-col items-start gap-3 xl:gap-[100px];
+
+        .footerLogo {
+            @apply ml-[-20px] lg:ml-[-40px] w-[200px] sm:w-[270px] h-[60px] bg-[url('/logo.png')] dark:bg-[url('/darkLogo.png')] bg-no-repeat bg-cover bg-center;
+        }
+    }
+
+    .footerRight {
+        @apply flex flex-col items-start gap-2;
+
+        .heading {
+            @apply text-text-light dark:text-text-dark text-[16px] font-normal lg:text-[24px];
+        }
+
+        .footerForm {
+            @apply flex;
+        }
+
+        .footerButton {
+            @apply bg-[var(--primary-color)] text-text-dark text-[14px] font-bold px-[16px] py-[8px] lg:px-[32px] lg:py-[20px];
+        }
+
+        .footerInput {
+            @apply bg-[#fff] text-[#000] w-[100%] text-[14px] font-bold px-[16px] py-[8px] lg:px-[32px] lg:py-[20px];
+        }
+    }
+
+    .footerText {
+        @apply text-text-light dark:text-text-dark text-[12px] lg:text-[16px] font-normal leading-[24px] lg:leading-[32px];
+    }
+
+    .powered {
+        @apply text-[600] text-[var(--primary-color)];
+    }
+}

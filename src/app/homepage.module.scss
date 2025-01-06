@@ -1,0 +1,124 @@
+.hero {
+    @apply flex flex-col items-center justify-center h-[450px] xl:h-[650px] text-text-dark px-[20px] sm:px-[40px] lg:px-[96px];
+
+    .mainHeroContent {
+        @apply flex flex-col items-center justify-center gap-[40px] max-w-[689px] text-center;
+
+        .textWrapper {
+            @apply flex flex-col items-center justify-center gap-[20px];
+
+            .heroTitle {
+                @apply text-[32px] lg:text-[64px] font-[600] font-playfair;
+            }
+
+            .heroText {
+                @apply text-[12px] lg:text-[16px] font-[400];
+            }
+        }
+
+    }
+}
+
+    .statistics {
+        @apply flex justify-between items-start w-full px-[20px] py-[30px] sm:px-[40px] lg:px-[96px] text-text-dark;
+
+        .statItem {
+            @apply flex flex-col md:flex-row items-center justify-center gap-[5px] md:gap-[10px] max-w-[250px] pl-[20px] border-l-[1px] border-l-[var(--primary-color)];
+
+            .firstDiv{
+                @apply text-[20px] md:text-[50px] font-[600] font-playfair;
+            }
+
+            .secondDiv{
+                @apply flex flex-col text-[10px] md:text-[14px] font-[400] leading-normal items-center justify-center;
+            }
+        }    
+    }
+
+    .useCases {
+        @apply flex flex-col bg-bg-light dark:bg-bg-dark gap-[20px] px-[20px] sm:px-[40px] lg:px-[96px] py-[40px] lg:py-[60px];
+    
+        .sectionDesc {
+            @apply flex flex-col gap-[14px] text-text-light dark:text-text-dark;
+
+            .heading {
+                @apply text-[32px] lg:text-[64px] font-[600] font-playfair;
+            }
+
+            .text {
+                @apply text-[12px]  lg:text-[14px] font-[400] max-w-[630px];
+            }
+        }
+
+        .useCaseGrid {
+            @apply grid grid-cols-1 sm:grid-cols-2  gap-y-[40px] gap-x-[24px] md:gap-y-[72px] py-[40px] lg:py-[40px];
+
+            & > :nth-child(5) {
+                @apply sm:col-span-2;
+            } 
+
+            
+            .useCaseImage:nth-of-type(5) .image {
+                @apply h-[350px] w-[auto] sm:w-full lg:h-[443px];
+            }
+
+            .useCaseImage {
+                @apply w-full relative;
+        
+                .image {
+                    @apply w-full h-[auto] object-cover;
+                }
+        
+                .description {
+                    @apply px-[20px] bg-gradient-to-b from-[transparent] via-[#1313135c] via-[#13131380] via-[#1313135c] via-[#1313135c] to-transparent items-center justify-center py-[24px] absolute bottom-0 w-full;
+
+                    .descTitle {
+                        @apply text-text-dark text-left text-[20px] font-[600];
+                    }
+        
+                    .descText {
+                        @apply text-text-dark text-[16px] font-[400] text-left;
+                    }
+                }
+            }
+        }
+    }
+
+    .catalogue {
+        @apply flex flex-col bg-bg-light dark:bg-bg-dark gap-[20px] px-[20px] sm:px-[40px] lg:px-[96px] py-[40px] lg:py-[60px];
+
+        .textWrapper {
+            @apply text-text-light dark:text-text-dark flex flex-col gap-[10px] max-w-[380px] xl:max-w-[550px] mb-[20px];
+
+            .heading {
+                @apply text-[32px] lg:text-[64px] font-[600] font-playfair;
+            }
+
+            .text {
+                @apply text-[10px] lg:text-[14px] font-[400] max-w-[630px];
+            }
+        }
+
+        .catalogueImages {
+            @apply flex flex-col gap-[20px] sm:flex-row justify-between;
+
+            .sectionTwo {
+                @apply sm:mt-[-100px];
+            }
+
+            .sectionOne, .sectionTwo {
+                @apply flex flex-col gap-[20px];
+
+                .catImage1 {
+                    @apply w-full max-w-[612px] h-[180px] md:h-[316px];
+                }
+                .catImage2 {
+                    @apply w-full max-w-[612px] h-[250px] md:h-[512px];
+                }
+            }
+        }
+
+        .buttonWrapper {
+            @apply flex justify-end sm:mt-[-50px];
+        }
+    }
