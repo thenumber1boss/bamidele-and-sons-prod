@@ -16,62 +16,98 @@ const catalogueItems = [
     {
         id: 1,
         image: image1,
-        description: 'Description for item 1'
+        title: "Obsidian Tinted Balcony",
+        description: "Tempered smoked glass with 316L stainless fittings.",
+        category: "Balcony",
+        material: "Glass"
     },
     {
         id: 2,
         image: image2,
-        description: 'Description for item 2'
+        title: "Frameless Shower Enclosure",
+        description: "10mm safety glass with gold-finish hydraulic hinges.",
+        category: "Bathroom",
+        material: "Glass"
     },
     {
         id: 3,
         image: image3,
-        description: 'Description for item 3'
+        title: "Commercial Tension Cable",
+        description: "High-tension steel cables for atrium spans.",
+        category: "Stairs",
+        material: "Steel"
     },
     {
         id: 4,
         image: image4,
-        description: 'Description for item 4'
+        title: "Minimalist Glazed Rail",
+        description: "Top-mounted flush channel system.",
+        category: "Balcony",
+        material: "Glass"
     },
     {
         id: 5,
         image: image5,
-        description: 'Description for item 5'
+        title: "Horizontal Rod System",
+        description: "Brushed stainless steel, 12mm solid rod infill.",
+        category: "Stairs",
+        material: "Steel"
     },
     {
         id: 6,
         image: image6,
-        description: 'Description for item 6'
+        title: "Cantilevered Glass Facade",
+        description: "Structural glazing for seamless exterior views.",
+        category: "Exterior",
+        material: "Glass"
     },
     {
         id: 7,
         image: image7,
-        description: 'Description for item 7'
+        title: "Geometric Steel Grid",
+        description: "Laser-cut decorative panels for privacy.",
+        category: "Exterior",
+        material: "Steel"
     },
     {
         id: 8,
         image: image8,
-        description: 'Description for item 8'
+        title: "Smoked Glass Partition",
+        description: "Executive office dividers with sound dampening.",
+        category: "Balcony",
+        material: "Glass"
     },
     {
         id: 9,
         image: image9,
-        description: 'Description for item 9'
+        title: "Etched Art-Deco Pane",
+        description: "Custom sandblasted designs on tempered glass.",
+        category: "Stairs",
+        material: "Glass"
     },
     {
         id: 10,
         image: image10,
-        description: 'Description for item 10'
+        title: "Solid Panel Guardrail",
+        description: "Heavy-gauge steel privacy guard for penthouses.",
+        category: "Balcony",
+        material: "Steel"
     },
     {
         id: 11,
         image: image11,
-        description: 'Description for item 11'
+        title: "Tubular Handrail Composite",
+        description: "Black powder-coated finish with chrome connectors.",
+        category: "Stairs",
+        material: "Steel"
     },
     {
         id: 12,
         image: image12,
-        description: 'Description for item 12'
+        title: "Luxury Gold Shower Suite",
+        description: "PVD Gold coated fittings on ultra-clear glass.",
+        category: "Bathroom",
+        material: "Glass"
     }
 ];
 

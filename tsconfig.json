@@ -18,11 +18,12 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".", // Ensures paths are relative to the root
+    "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@app/*": ["src/app/*"],
+      "@context/*": ["src/context/*"], 
       "@src/*": ["src/*"]
     }
   },

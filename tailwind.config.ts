@@ -5,11 +5,12 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Changed to 'class' for manual toggling if needed
   theme: {
-    darkMode: 'selector',
     extend: { 
       fontFamily: {
-        playfair: ['"Playfair Display"', 'serif'],
+        // Updated to match the '@font-face' names in globals.css
+        playfair: ['TrueFlair', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'], 
       },
       fontWeight: {
@@ -24,14 +25,24 @@ export default {
         black: '900',
       },
       colors: {
-        primary:'var(--primary-color)',
+        // Mapped to your new Luxury Palette in globals.css
+        primary: {
+          gold: 'var(--primary-gold)',   // #D4AF37
+          steel: 'var(--primary-steel)', // #E5E7EB
+          teal: 'var(--primary-teal)',   // #1F7A8C
+        },
         bg: {
-          light: 'var(--background-light)',
-          dark: 'var(--background-dark)',
+          primary: 'var(--bg-primary)',   // #0F1012
+          secondary: 'var(--bg-secondary)', // #1A1C1E
         },
         text: {
-          light: 'var(--text-light)',
+          primary: 'var(--text-primary)',   // #F3F4F6
+          secondary: 'var(--text-secondary)', // #9CA3AF
           dark: 'var(--text-dark)',
+        },
+        glass: {
+          border: 'var(--glass-border)',
+          bg: 'var(--glass-bg)',
         }
       },
       screens: {

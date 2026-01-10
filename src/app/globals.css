@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: 'TrueFlair';
   src: url('/fonts/Playfair-Variable.woff2') format('woff2');
@@ -18,28 +17,61 @@
 }
 
 :root {
-  --background-light: #EFEFEF;
-  --background-dark: #131313;
-  --primary-color: #00BFC6;
-  --accent-color: #00bfc6bd;
-  --text-dark: #f0f0f0;
-  --text-light: #131313;
+  /* Luxury Palette 2026 */
+  --bg-primary: #0F1012; 
+  --bg-secondary: #1A1C1E; 
+  
+  --primary-gold: #D4AF37; 
+  --primary-steel: #E5E7EB; 
+  --primary-teal: #1F7A8C; 
+  
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-dark: #111827;
+  
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.03);
 }
 
 body {
-  background: url('../assets/home_img.jpg') no-repeat center center fixed;
-  background-size: cover;
-
-  &::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: hwb(0 7% 93% / 0.705);
-    z-index: -1;
-  }
-
+  @apply bg-[#0F1012] text-[#F3F4F6];
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TrueFlair', serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .text-metallic {
+    background: linear-gradient(135deg, #E5E7EB 0%, #9CA3AF 50%, #E5E7EB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+  }
+}
+
+/* Animations moved from SCSS */
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes shinePass {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+/* Utility class for the button shine animation */
+.animate-shine-pass {
+  animation: shinePass 0.8s forwards;
 }

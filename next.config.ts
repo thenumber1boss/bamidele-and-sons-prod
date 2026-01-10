@@ -10,7 +10,8 @@ const nextConfig: NextConfig = {
 
 // Adding Webpack aliases and Dart Sass fix
 const customConfig = {
-  webpack(config: any) {
+  webpack(config: import("webpack").Configuration) {
+    config.resolve = config.resolve ?? {};
     config.resolve.alias = {
       ...config.resolve.alias,
       "@components": path.resolve(__dirname, "src/components"),
@@ -18,6 +19,8 @@ const customConfig = {
       "@app": path.resolve(__dirname, "src/app"),
       "@src": path.resolve(__dirname, "src"),
     };
+    config.module = config.module ?? {};
+    config.module.rules = config.module.rules ?? [];
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],

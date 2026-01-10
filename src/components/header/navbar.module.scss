@@ -1,66 +1,47 @@
-/* navBar.module.scss */
-
-
 .navContainer {
-  @apply flex flex-col w-full
-    self-center xl:gap-[100px] xl:justify-center px-[20px]
-    sm:px-[40px] lg:px-[96px] bg-bg-light dark:bg-bg-dark;
+    @apply flex flex-col w-full px-[20px] sm:px-[40px] lg:px-[96px] py-4 transition-all duration-300;
+    background: rgba(15, 16, 18, 0.8); /* Semi-transparent dark base */
 }
   
-  .inner {
-    @apply flex justify-between pb-[10px] md:pb-0;
-  }
-  .logoContainer {
-    @apply w-[200px] sm:w-[270px] ml-[-20px] lg:ml-[-40px] h-[60px] bg-[url('/logo.png')] dark:bg-[url('/darkLogo.png')] bg-no-repeat bg-cover bg-center;
-  }
-    
-    .navMenu {
-      @apply hidden items-center md:flex gap-[10px] md:gap-[60px] p-[10px];
-    }
+.inner {
+    @apply flex justify-between items-center w-full max-w-[1440px] mx-auto;
+}
 
-    .hide {
-        @apply md:hidden p-[10px] flex items-center;
-      }
-    
-    .specialActions {
-      display: flex;
-      gap: 24px;
-      @media (max-width: 769px) {
-        gap: 10px;
-        
-      }
-    }
+.logoContainer {
+    @apply w-[180px] sm:w-[220px] h-[50px] bg-[url('/darkLogo.png')] bg-no-repeat bg-contain bg-left;
+    /* Assuming darkLogo.png exists, otherwise fallback to text or existing logo logic */
+}
   
-    .navIcons {
-      @apply text-[var(--primary-color)] w-[40px] h-[40px] cursor-pointer;
-      &:hover {
-        color: var(--primary-color);
-      }
-      @media (max-width: 769px) {
-        @apply w-[30px] h-[30px];
-        
-      }
-    }
+.navMenu {
+    @apply hidden md:flex items-center gap-[40px];
+}
+
+.navLink {
+    @apply text-[var(--text-secondary)] text-[14px] font-[500] uppercase tracking-wider transition-colors duration-300;
     
-    .mobileMenu {
-      @apply flex flex-col items-start w-full gap-[1rem] px-[20px] py-[20px] md:hidden border-t-[2px] border-t-[var(--primary-color)] md:border-b-0 bg-bg-light dark:bg-bg-dark;
-    }
-
-
-.navText {
-  @apply text-text-light dark:text-text-dark text-[16px] font-[400] pb-[10px] cursor-pointer border-b-[solid] border-b-[2px] border-b-[transparent] transition-colors duration-300 ease-in-out;
-  
     &:hover {
-      border-bottom: 2px solid var(--primary-color);
+        @apply text-[var(--primary-gold)];
     }
-  
-    @media (max-width: 1280px) {
-      width: auto;
+}
+
+.active {
+    @apply text-white font-[600];
+    border-bottom: 1px solid var(--primary-gold);
+}
+
+.smartCTA {
+    @apply bg-[var(--primary-teal)] text-white px-6 py-2 rounded-sm text-[14px] font-[600] uppercase tracking-wide transition-all duration-300;
+    
+    &:hover {
+        @apply bg-white text-[var(--bg-primary)];
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     }
-  }
-  
-  .active {
-    color: var(--primary-color);
-    font-weight: 600;
-  }
-  
+}
+
+.mobileMenu {
+    @apply flex flex-col items-start w-full gap-6 px-4 py-8 md:hidden bg-[var(--bg-primary)] border-t border-[var(--glass-border)] absolute top-[100%] left-0 h-screen;
+}
+
+.mobileLink {
+    @apply text-[24px] font-playfair text-white;
+}
