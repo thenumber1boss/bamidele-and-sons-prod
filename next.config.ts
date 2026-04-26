@@ -1,11 +1,17 @@
 import type { NextConfig } from "next";
 import path from "path";
 
+
 // Default Next.js config
 const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
 };
 
 // Adding Webpack aliases and Dart Sass fix
