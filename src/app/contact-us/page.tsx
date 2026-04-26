@@ -77,7 +77,7 @@ const ContactPage = () => {
                             {isPartner ? "B2B Partnership" : "Private Commission"}
                         </span>
                         <h1 className="text-4xl lg:text-5xl font-playfair text-white mt-2 mb-4">
-                            Let's Discuss<br/>Your Project
+                            Let&apos;s Discuss<br/>Your Project
                         </h1>
                         <p className="text-gray-400">
                             Fill out the details below so we can route your request to the correct department.

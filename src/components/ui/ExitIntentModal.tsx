@@ -38,7 +38,7 @@ const ExitIntentModal = () => {
         </button>
 
         <div className="text-center mb-6">
-            <span className="text-[var(--primary-gold)] uppercase text-xs tracking-[0.2em] font-bold">Wait! Don't build without this.</span>
+            <span className="text-[var(--primary-gold)] uppercase text-xs tracking-[0.2em] font-bold">Wait! Don&apos;t build without this.</span>
             <h3 className="text-3xl font-playfair text-white mt-2">The 2026 Stainless Steel Trend Report</h3>
             <p className="text-gray-400 mt-4 text-sm leading-relaxed">
                 Before you commit to a design, download our curated guide on the top 5 imported profiles defining luxury homes in Abuja and Lagos this year.
