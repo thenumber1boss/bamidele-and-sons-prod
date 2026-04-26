@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@components/ui/button/button";
 import { useUser } from "@context/UserContext";
 
 const DynamicHero = () => {
   const { visitTier } = useUser();
+  const router = useRouter();
 
   const content = {
     1: {
@@ -28,11 +30,10 @@ const DynamicHero = () => {
   }[visitTier];
 
   return (
-    <section className="flex flex-col items-center justify-center h-[550px] xl:h-[750px] relative px-[20px] sm:px-[40px] lg:px-[96px] pt-40 bg-[url('/home_img.jpg')] bg-no-repeat bg-cover bg-center bg-fixed">
-      {/* Overlay */}
+
+    <section className="flex flex-col items-center justify-start min-h-[90vh] relative px-[20px] sm:px-[40px] lg:px-[96px] pt-[180px] pb-10 md:pb-20 bg-[url('/home_img.jpg')] bg-no-repeat bg-cover bg-center bg-fixed">
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F1012] via-[#0f1012d9] to-transparent z-0" />
       
-      {/* Content */}
       <div className="flex flex-col items-start justify-center gap-[40px] max-w-[800px] z-10 w-full">
         <div className="flex flex-col items-start justify-center gap-[20px]">
           <h1 className="text-[40px] lg:text-[80px] font-[600] font-playfair leading-[1.1] whitespace-pre-line text-white text-metallic">
@@ -42,9 +43,10 @@ const DynamicHero = () => {
             {content.subtitle}
           </p>
         </div>
+        
         <div className="mt-8">
-            <Button onClick={() => window.location.href = content.link}>
-            {content.cta}
+            <Button onClick={() => router.push(content.link)}>
+              {content.cta}
             </Button>
         </div>
       </div>

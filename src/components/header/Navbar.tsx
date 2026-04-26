@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; // Import Image
 import { usePathname } from "next/navigation";
 import { Menu, Close } from "@mui/icons-material";
 import { useUser } from "@context/UserContext";
@@ -21,18 +22,26 @@ const NavBar = () => {
 
   const cta = getSmartCTA();
 
-  // Helper for Nav Links
   const linkClasses = (path: string) => `
     text-[14px] font-[500] uppercase tracking-wider transition-colors duration-300
     ${isActive(path) ? "text-white font-[600] border-b border-[var(--primary-gold)]" : "text-[var(--text-secondary)] hover:text-[var(--primary-gold)]"}
   `;
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-panel bg-[#0F1012]/80 px-[20px] sm:px-[40px] lg:px-[96px] py-4 transition-all duration-300">
+    <nav className="fixed top-0 w-full z-50 glass-panel bg-[#0F1012]/90 px-[20px] sm:px-[40px] lg:px-[96px] py-4 transition-all duration-300 backdrop-blur-md">
       <div className="flex justify-between items-center w-full max-w-[1440px] mx-auto">
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <div className="w-[140px] sm:w-[160px] h-[40px] bg-[url('/darkLogo.png')] bg-no-repeat bg-contain bg-center"></div>
+        
+        {/* Logo Area - Updated for better visibility */}
+        <Link href="/">
+          <div className="relative w-[100px] sm:w-[140px] md:w-[240px] h-[60px] sm:h-[80px]"> 
+            <Image 
+              src="/darkLogo.png" 
+              alt="Bamidele & Sons" 
+              fill 
+              className="object-contain object-left" // object-contain ensures the full logo is visible without cropping
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Menu */}
@@ -60,7 +69,7 @@ const NavBar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="flex flex-col items-start w-full gap-6 px-4 py-8 md:hidden bg-[var(--bg-primary)] border-t border-[var(--glass-border)] absolute top-[100%] left-0 h-screen">
+        <div className="flex flex-col items-start w-full gap-6 px-4 py-8 md:hidden bg-[var(--bg-primary)] border-t border-[var(--glass-border)] absolute top-[100%] left-0 h-screen z-40">
           <Link href="/" onClick={toggleMenu} className="text-[24px] font-playfair text-white">Home</Link>
           <Link href="/services" onClick={toggleMenu} className="text-[24px] font-playfair text-white">Services</Link>
           <Link href="/catalogue" onClick={toggleMenu} className="text-[24px] font-playfair text-white">Catalogue</Link>
